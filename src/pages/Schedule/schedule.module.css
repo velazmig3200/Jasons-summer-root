@@ -1,0 +1,7 @@
+.section {
+	border: 1px solid var(--white);
+	margin: 4rem 1px;
+}
+.section > p {
+	margin: 2rem;
+}
