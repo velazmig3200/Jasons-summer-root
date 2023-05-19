@@ -4,13 +4,17 @@ module.exports = {
 	entry: "./src/index.js",
 	output: {
 		path: path.join(__dirname, "/dist"),
-		filename: "bundle.js"
+		filename: "bundle.js",
+		publicPath: "/"
 	},
 	watch: true,
 	watchOptions: {
 		aggregateTimeout: 600, //chunks saves
 		poll: 1700, //check for changes every [n] milliseconds
 		ignored: ["/node_modules"]
+	},
+	devServer: {
+		historyApiFallback: true
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

@@ -1,7 +1,14 @@
 .section {
-	border: 1px solid var(--white);
+	/*position*/
 	margin: 4rem 1px;
+	padding: 0.2rem 0.6rem;
+	/*content*/
+	border: 1px solid var(--white);
+	background-color: hsla(0, 0%, 0%, 0.512);
 }
 .section > p {
 	margin: 2rem;
+}
+.section > p > b {
+	color: var(--color2);
 }

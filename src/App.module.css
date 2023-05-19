@@ -5,7 +5,9 @@
 	/* outline: 1px solid red; */
 }
 :root {
-    --color1: hsl(52, 100%, 56%);
+	/* --color1: hsl(62, 100%, 61%); */
+	--color1: hsl(37, 81%, 60%);
+	--color2: hsl(262, 100%, 72%);
 	--black: black;
 	--white: white;
 	--bg-color: var(--black);
@@ -14,11 +16,13 @@
 
 	background-color: var(--bg-color);
 	color: var(--white);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body,
 body > div {
 	height: 100%;
+	min-height: 100vh;
 }
 
 a {
@@ -42,14 +46,12 @@ a {
 .bg {
 	/*position*/
 	position: absolute;
-	/* left: 0; */
 	top: var(--header-height);
 	width: 100%;
 	/*content*/
-	background-color: blue;
 	overflow: hidden;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 910px) {
 	.bg {
 		width: auto;
 		height: calc(100% - var(--header-height));
