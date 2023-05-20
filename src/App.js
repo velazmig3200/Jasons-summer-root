@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import ReadingSources from "./pages/ReadingSources/ReadingSources";
 import PdfPage from "./pages/PdfPage/PdfPage";
 import Header from "./Header/Header";
 import appCss from "./App.module.css";
@@ -15,7 +16,13 @@ function App() {
 				<Route
 					key={result.length}
 					path={readings[i].path}
-					element={readings[i].element}
+					element={
+						<ReadingSources
+							reading={readings[i]}
+							pdf={readings[i].pdf}
+							audiobook={readings[i].audiobook}
+						/>
+					}
 				/>
 			);
 

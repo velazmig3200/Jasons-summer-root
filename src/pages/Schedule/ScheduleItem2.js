@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ScheduleItem2({ week, title, routeTo, note }) {
+function ScheduleItem2({ week, title, author, routeTo, note }) {
 	return (
 		<p>
 			<b>Week {week}: </b>
-			<Link to={routeTo}>{title}</Link> {note}
+			<Link to={routeTo}>{title}</Link> {author} {note}
 		</p>
 	);
 }

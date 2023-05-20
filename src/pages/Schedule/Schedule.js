@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ScheduleItem2 from "./ScheduleItem2";
 import scheduleCss from "./schedule.module.css";
 import readings from "../../readings";
@@ -19,6 +18,7 @@ function Schedule() {
 						key={i}
 						week={i + 1}
 						title={readings[i].title}
+						author={` by ${readings[i].author}. `}
 						routeTo={readings[i].path}
 						note={readings[i].note}
 					/>

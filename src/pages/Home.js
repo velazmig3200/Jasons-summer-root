@@ -3,10 +3,10 @@ import Schedule from "./Schedule/Schedule";
 
 function Home() {
 	return (
-		<div style={{ margin: "0 1.3rem" }}>
+		<main>
 			<h1>Schedule</h1>
 			<Schedule />
-		</div>
+		</main>
 	);
 }
 
