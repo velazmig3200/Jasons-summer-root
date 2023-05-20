@@ -8,15 +8,18 @@
 	/* --color1: hsl(62, 100%, 61%); */
 	--color1: hsl(37, 81%, 60%);
 	--color2: hsl(262, 100%, 72%);
+	--color3: hsla(262, 71%, 18%, 0.9);
 	--black: black;
 	--white: white;
 	--bg-color: var(--black);
 
 	--header-height: 2.2rem;
+	--main-margin: 1.3rem;
 
 	background-color: var(--bg-color);
 	color: var(--white);
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.3rem;
 }
 
 body,
@@ -29,7 +32,7 @@ a {
 	color: var(--color1);
 }
 main {
-	margin: 0 1.3rem;
+	margin: 0 var(--main-margin);
 }
 
 .bgContainer {

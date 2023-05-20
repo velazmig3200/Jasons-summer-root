@@ -1,12 +1,18 @@
 {
+	"homepage": "https://velazmig3200.github.io/",
 	"name": "jasons-summer-root",
 	"version": "1.0.0",
+	"repository": {
+		"url": "git+https://github.com/velazmig3200/Jasons-summer-root.git"
+	},
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"build": "webpack --mode development",
 		"start": "webpack-dev-server --mode development --open --hot",
-		"bundle": "webpack --mode production"
+		"bundle": "webpack --mode production",
+		"predeploy": "npm run bundle",
+		"deploy": "gh-pages -d dist"
 	},
 	"keywords": [],
 	"author": "",
@@ -23,6 +29,7 @@
 		"babel-loader": "^9.1.2",
 		"css-loader": "^6.7.3",
 		"file-loader": "^6.2.0",
+		"gh-pages": "^5.0.0",
 		"html-webpack-plugin": "^5.5.1",
 		"style-loader": "^3.3.2",
 		"webpack": "^5.83.0",

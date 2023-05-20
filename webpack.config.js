@@ -7,7 +7,7 @@ module.exports = {
 		filename: "bundle.js",
 		publicPath: "/"
 	},
-	watch: true,
+	watch: false,
 	watchOptions: {
 		aggregateTimeout: 600, //chunks saves
 		poll: 1700, //check for changes every [n] milliseconds
