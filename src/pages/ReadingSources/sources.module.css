@@ -1,8 +1,7 @@
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: space-evenly;
+	justify-content: space-around;
 }
 .container > div {
 	margin-bottom: 2rem;
@@ -19,6 +18,11 @@
 	background-color: black;
 	padding: 0.1rem 0.4rem;
 	border-top: 2px solid white;
+}
+
+.iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
 }
 
 .imgContainer {

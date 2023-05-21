@@ -8,9 +8,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack --mode development",
-		"start": "webpack-dev-server --mode development --open --hot",
-		"bundle": "webpack --mode production",
+		"dev": "webpack --mode development --watch",
+		"devServer": "webpack-dev-server --mode development --open --hot",
+		"build": "webpack --mode production",
 		"predeploy": "npm run bundle",
 		"deploy": "gh-pages -d dist"
 	},

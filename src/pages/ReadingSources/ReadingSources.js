@@ -40,10 +40,9 @@ function ReadingSources({ reading, pdf, audiobook }) {
 				)}
 
 				{audiobook && (
-					<div className={`${sourcesCss.audiobook}`}>
+					<div>
 						<iframe
-							width="560"
-							height="315"
+							className={`${sourcesCss.iframe}`}
 							src={audiobook.src}
 							title="YouTube video player"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

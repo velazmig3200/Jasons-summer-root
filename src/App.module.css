@@ -57,9 +57,10 @@ main {
 	/*content*/
 	overflow: hidden;
 }
-@media only screen and (max-width: 730px) {
+
+@media only screen and (max-width: 880px) {
 	.bg {
-		width: auto;
 		height: calc(100% - var(--header-height));
+		width: auto;
 	}
 }
