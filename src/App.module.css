@@ -67,9 +67,20 @@ button {
 		width: auto;
 	}
 }
+@media (min-height: 1100px) and (min-width: 881px) and (max-width: 1660px) {
+	.bg {
+		height: calc(100% - var(--header-height));
+		width: auto;
+	}
+}
 @media (max-width: 750px) {
 	main {
 		margin: 0 calc(var(--main-margin) / 3);
 		font-size: 0.9rem;
+	}
+}
+@media (min-width: 1600px) {
+	:root {
+		font-size: 2.3rem;
 	}
 }
