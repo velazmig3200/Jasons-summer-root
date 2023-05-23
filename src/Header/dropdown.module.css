@@ -11,8 +11,6 @@
 	border-bottom-left-radius: 0.5rem;
 	display: none;
 	overflow-y: auto;
-
-	outline: 1px solid red;
 }
 .container > a {
 	/*position*/
