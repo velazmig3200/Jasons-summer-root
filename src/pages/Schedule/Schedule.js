@@ -30,7 +30,8 @@ function Schedule() {
 
 	return (
 		<>
-			<p>First Meeting May 20</p>
+			<h1>Schedule</h1>
+			<p>First Meeting May 21</p>
 			<section className={`${scheduleCss.section}`}>
 				<h3>Post Colonialism</h3>
 
