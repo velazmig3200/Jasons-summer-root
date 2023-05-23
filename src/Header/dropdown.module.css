@@ -1,0 +1,36 @@
+.container {
+	/*position*/
+	position: absolute;
+	right: 0;
+	top: var(--header-height);
+	z-index: 2;
+	/*content*/
+	background-color: var(--black);
+	border: 1px solid var(--color2);
+	border-bottom-left-radius: 0.5rem;
+	display: none;
+}
+.container > a {
+	/*position*/
+	display: block;
+	margin: 0.6rem 0.5rem;
+	padding: 0.3rem 0.3rem;
+	/*text*/
+	text-decoration: none;
+	/*content*/
+	border-radius: 0.2rem;
+}
+.container > a:hover {
+	outline: 1px solid var(--white);
+}
+
+.show {
+	display: inline-block;
+}
+
+@media (max-width: 750px) {
+	.container {
+		right: -30px;
+		top: calc(var(--header-height) - 5px);
+	}
+}
