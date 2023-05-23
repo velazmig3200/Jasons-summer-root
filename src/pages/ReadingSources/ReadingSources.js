@@ -25,30 +25,24 @@ function ReadingSources({ reading, pdf, audiobook }) {
 			<br />
 
 			<div className={`${sourcesCss.container}`}>
-				{pdf && (
-					<div className={`${sourcesCss.pdf}`}>
+				{pdf ? (
+					<Link to={pdf.path} className={`${sourcesCss.pdf}`}>
 						<p className={`${sourcesCss.pdfLabel}`}>PDF</p>
-						<Link
-							to={pdf.path}
-							className={`${sourcesCss.imgContainer}`}>
-							<img
-								src={reading.coverImage}
-								className={`${sourcesCss.img}`}
-							/>
-						</Link>
-					</div>
-				)}
+						<img
+							src={reading.coverImage}
+							className={`${sourcesCss.img}`}
+						/>
+					</Link>
+				) : null}
 
-				{audiobook && (
-					<div>
-						<iframe
-							className={`${sourcesCss.iframe}`}
-							src={audiobook.src}
-							title="YouTube video player"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowFullScreen></iframe>
-					</div>
-				)}
+				{audiobook ? (
+					<iframe
+						className={`${sourcesCss.iframe}`}
+						src={audiobook.src}
+						title="YouTube video player"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowFullScreen></iframe>
+				) : null}
 			</div>
 		</main>
 	);
