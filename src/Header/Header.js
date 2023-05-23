@@ -7,6 +7,12 @@ import readings from "../readings";
 function Header() {
 	const [dropdownState, setDropdownState] = useState(false);
 
+	window.addEventListener("click", e => {
+		if (e.target.id.includes("dropdown")) return;
+		if (!dropdownState) return;
+		setDropdownState(false);
+	});
+
 	return (
 		<nav className={`${headerCss.header}`}>
 			<div>
@@ -23,6 +29,7 @@ function Header() {
 					⌂
 				</Link>
 				<button
+					id="dropdown-1"
 					className={`${headerCss.hamburger}`}
 					onClick={() => setDropdownState(!dropdownState)}>
 					≡
@@ -36,8 +43,10 @@ function Header() {
 			<div className={`${headerCss.linkContainer}`}>
 				<a>Home</a>
 				<button
+					id="dropdown-2"
 					onClick={() => setDropdownState(!dropdownState)}
-					className={`${headerCss.button}`}>
+					className={`${headerCss.button} 
+                    ${dropdownState ? headerCss.borderBottom : null}`}>
 					Readings <span className={`${headerCss.downArrow}`}>^</span>
 					<Dropdown
 						links={readings.map(e => e.title)}

@@ -7,6 +7,7 @@
 	background-color: transparent;
 	color: var(--color1);
 	border: none;
+	border-bottom: 2px solid transparent;
 	font-size: 1rem;
 	font-family: "Times New Roman", Times, serif;
 }
@@ -51,7 +52,8 @@
 	display: none;
 }
 .hamburger:active,
-.homeIcon:active {
+.homeIcon:active,
+.linkContainer > *:active {
 	color: var(--color2);
 }
 
@@ -67,6 +69,9 @@
 	display: inline-block;
 	font-weight: bold;
 	transform: rotate(180deg);
+}
+.borderBottom {
+	border-color: var(--white);
 }
 
 @media (max-width: 750px) {
