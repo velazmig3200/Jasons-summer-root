@@ -7,7 +7,11 @@ function Dropdown({ links, dropdownState }) {
 		let result = [];
 
 		for (let i in links) {
-			result.push(<Link key={i}>{links[i]}</Link>);
+			result.push(
+				<Link to={links[i].path} key={i}>
+					{links[i].title}
+				</Link>
+			);
 		}
 
 		return result;

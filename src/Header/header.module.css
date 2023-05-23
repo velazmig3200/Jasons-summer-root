@@ -1,4 +1,4 @@
-.a {
+.summer {
 	color: var(--white);
 	text-decoration: none;
 	font-size: 1.2rem;
@@ -61,8 +61,10 @@
 	margin: 0 1rem;
 	border-bottom: 2px solid transparent;
 }
-.linkContainer > *:hover {
-	border-color: var(--white);
+@media (hover: hover) {
+	.linkContainer > *:hover {
+		border-color: var(--white);
+	}
 }
 
 .downArrow {
