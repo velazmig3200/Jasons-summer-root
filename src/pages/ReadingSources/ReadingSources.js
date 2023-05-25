@@ -26,13 +26,15 @@ function ReadingSources({ reading, pdf, audiobook }) {
 
 			<div className={`${sourcesCss.container}`}>
 				{pdf ? (
-					<Link to={pdf.path} className={`${sourcesCss.pdf}`}>
+					<div className={`${sourcesCss.pdf}`}>
 						<p className={`${sourcesCss.pdfLabel}`}>PDF</p>
-						<img
-							src={reading.coverImage}
-							className={`${sourcesCss.img}`}
-						/>
-					</Link>
+						<Link to={pdf.path} className={`${sourcesCss.pdfLink}`}>
+							<img
+								src={reading.coverImage}
+								className={`${sourcesCss.img}`}
+							/>
+						</Link>
+					</div>
 				) : null}
 
 				{audiobook ? (
