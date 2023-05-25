@@ -29,7 +29,6 @@
 }
 @media (hover: none) {
 	.container > a {
-		/* outline: 1px solid white; */
 		background-color: hsla(0, 0%, 100%, 0.2);
 	}
 }
@@ -40,8 +39,8 @@
 
 @media (max-width: 750px) {
 	.container {
-		right: -29px;
-		top: calc(var(--header-height) - 5px);
-		font-size: 0.8rem;
+		/* right: -29px; */
+		/* top: calc(var(--header-height) - 5px); */
+		font-size: 75%;
 	}
 }
