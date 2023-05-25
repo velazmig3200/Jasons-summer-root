@@ -2,12 +2,13 @@ import React from "react";
 import pdfCss from "./pdf.module.css";
 
 function PdfPage({ pdfLink, altText }) {
+	console.log(pdfLink);
 	return (
-		<object
+		<iframe
 			className={`${pdfCss.pdf}`}
-			data={pdfLink}
 			type="application/pdf"
-			alt={altText}></object>
+			src={pdfLink}
+		/>
 	);
 }
 
