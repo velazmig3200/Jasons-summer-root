@@ -2,12 +2,12 @@ import React from "react";
 import pdfCss from "./pdf.module.css";
 
 function PdfPage({ pdfLink, altText }) {
-	console.log(pdfLink);
 	return (
 		<iframe
 			className={`${pdfCss.pdf}`}
 			type="application/pdf"
-			src={pdfLink}
+			src={`https://docs.google.com/viewer?url=${pdfLink}&embedded=true`}
+            alt="altText"
 		/>
 	);
 }

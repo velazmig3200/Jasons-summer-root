@@ -9,7 +9,7 @@ const readings = [
 		path: "/discourse-on-colonialism",
 		note: "Book pages 31-78, ignore the intro and the interview at the end.",
 		pdf: {
-			link: "https://docs.google.com/viewer?url=https%3A%2F%2Ffiles.libcom.org%2Ffiles%2Fzz_aime_cesaire_robin_d.g._kelley_discourse_on_colbook4me.org_.pdf&embedded=true",
+			link: "https://files.libcom.org/files/zz_aime_cesaire_robin_d.g._kelley_discourse_on_colbook4me.org_.pdf",
 			alt: "discourse on colonialism pdf",
 			path: "/discourse-on-colonialism/pdf"
 		},
