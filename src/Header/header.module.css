@@ -69,11 +69,17 @@
 	}
 }
 
-.downArrow {
+.downArrow,
+.leftArrow {
 	display: inline-block;
-	font-weight: bold;
+}
+.downArrow {
 	transform: rotate(180deg);
 }
+.leftArrow {
+	transform: rotate(-90deg);
+}
+
 .borderBottom {
 	border-color: var(--white);
 }

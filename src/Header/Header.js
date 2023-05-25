@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import headerCss from "./header.module.css";
 import readings from "../readings";
 
 function Header() {
+	const currentPage = useLocation().pathname;
+	const navigate = useNavigate();
+	const goBack = () => {
+		navigate(-1);
+	};
+	console.log(`%c${currentPage}`, "color: orange; font-size: 0.9rem");
+
 	const readingLinks = readings.map(e => {
 		return { title: e.title, path: e.path };
 	});
@@ -19,12 +26,18 @@ function Header() {
 	return (
 		<nav className={`${headerCss.header}`}>
 			<div>
-				<Link to="/" className={`${headerCss.summer}`}>
-					Summer{" "}
-					<span className={`${headerCss.readingGroup}`}>
-						Reading Group
-					</span>
-				</Link>
+				{currentPage == "/" ? (
+					<Link to="/" className={`${headerCss.summer}`}>
+						Summer{" "}
+						<span className={`${headerCss.readingGroup}`}>
+							Reading Group
+						</span>
+					</Link>
+				) : (
+					<button onClick={goBack} className={`${headerCss.button}`}>
+						<b className={`${headerCss.leftArrow}`}>^</b> Back
+					</button>
+				)}
 			</div>
 
 			<div className={`${headerCss.iconContainer}`}>
@@ -48,7 +61,7 @@ function Header() {
 					onClick={() => setDropdownState(!dropdownState)}
 					className={`${headerCss.button} 
                     ${dropdownState ? headerCss.borderBottom : null}`}>
-					Readings <span className={`${headerCss.downArrow}`}>^</span>
+					Readings <b className={`${headerCss.downArrow}`}>^</b>
 				</button>
 			</div>
 
