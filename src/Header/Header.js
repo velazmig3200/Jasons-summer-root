@@ -36,10 +36,6 @@ function Header() {
 					className={`${headerCss.hamburger}`}
 					onClick={() => setDropdownState(!dropdownState)}>
 					≡
-					<Dropdown
-						links={readingLinks}
-						dropdownState={dropdownState}
-					/>
 				</button>
 			</div>
 
@@ -53,12 +49,10 @@ function Header() {
 					className={`${headerCss.button} 
                     ${dropdownState ? headerCss.borderBottom : null}`}>
 					Readings <span className={`${headerCss.downArrow}`}>^</span>
-					<Dropdown
-						links={readingLinks}
-						dropdownState={dropdownState}
-					/>
 				</button>
 			</div>
+
+			<Dropdown links={readingLinks} dropdownState={dropdownState} />
 		</nav>
 	);
 }

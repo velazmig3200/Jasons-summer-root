@@ -39,8 +39,8 @@
 
 @media (max-width: 750px) {
 	.container {
-		/* right: -29px; */
-		/* top: calc(var(--header-height) - 5px); */
+		top: var(--header-height);
+		right: 0;
 		font-size: 75%;
 	}
 }
