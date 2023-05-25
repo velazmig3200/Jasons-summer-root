@@ -33,6 +33,7 @@ a {
 }
 main {
 	margin: 0 var(--main-margin);
+	word-wrap: break-word;
 }
 button {
 	font-size: 1rem;
