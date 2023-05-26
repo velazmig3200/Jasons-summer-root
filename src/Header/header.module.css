@@ -8,6 +8,10 @@
 	border: none;
 	border-bottom: 2px solid transparent;
 }
+.a {
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
 
 .header {
 	/*position*/
@@ -55,7 +59,8 @@
 }
 .hamburger:active,
 .homeIcon:active,
-.linkContainer > *:active {
+.linkContainer > *:active,
+button:active {
 	color: var(--color2);
 }
 
@@ -64,7 +69,9 @@
 	border-bottom: 2px solid transparent;
 }
 @media (hover: hover) {
-	.linkContainer > *:hover {
+	.linkContainer > *:hover,
+	.button:hover,
+	.a:hover {
 		border-color: var(--white);
 	}
 }

@@ -1,20 +1,12 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import headerCss from "./header.module.css";
 import readings from "../readings";
 
 function Header() {
 	const currentPage = useLocation().pathname;
-	const navigate = useNavigate();
-	const goBack = () => {
-		navigate(-1);
-	};
-	console.log(`%c${currentPage}`, "color: orange; font-size: 0.9rem");
-
-	const readingLinks = readings.map(e => {
-		return { title: e.title, path: e.path };
-	});
+	const previousPage = `/${currentPage.split("/").slice(1, -1)}`;
 	const [dropdownState, setDropdownState] = useState(false);
 
 	window.addEventListener("click", e => {
@@ -34,9 +26,9 @@ function Header() {
 						</span>
 					</Link>
 				) : (
-					<button onClick={goBack} className={`${headerCss.button}`}>
+					<Link to={previousPage} className={`${headerCss.a}`}>
 						<b className={`${headerCss.leftArrow}`}>^</b> Back
-					</button>
+					</Link>
 				)}
 			</div>
 
@@ -65,7 +57,7 @@ function Header() {
 				</button>
 			</div>
 
-			<Dropdown links={readingLinks} dropdownState={dropdownState} />
+			<Dropdown links={readings} dropdownState={dropdownState} />
 		</nav>
 	);
 }
