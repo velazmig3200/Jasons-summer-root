@@ -3,14 +3,6 @@ import { Link } from "react-router-dom";
 import readings from "../../readings";
 import filterPath from "../../filterPath";
 
-// function ScheduleItem2({ week, title, author, routeTo, note }) {
-// 	return (
-// 		<p>
-// 			<b>Week {week}: </b>
-// 			<Link to={routeTo}>{title}</Link> {author} {note}
-// 		</p>
-// 	);
-// }
 function ScheduleItem2({ item }) {
 	const currentReading = readings.find(e => {
 		if (!e.title) return;
