@@ -29,10 +29,11 @@ function App() {
 			);
 
 			if (readings[i].pdf) {
+				const pdfPath = `${filterPath(readings[i].title)}/pdf`;
 				result.push(
 					<Route
 						key={result.length}
-						path={readings[i].pdf.path}
+						path={pdfPath}
 						element={
 							<PdfPage
 								pdfLink={readings[i].pdf.link}

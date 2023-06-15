@@ -2,6 +2,7 @@ import React from "react";
 import sourcesCss from "./sources.module.css";
 import ExternalLinkIcon from "../../ExternalLinkIcon";
 import { Link } from "react-router-dom";
+import filterPath from "../../filterPath";
 
 function ReadingSources({ reading, pdf, audiobook }) {
 	return (
@@ -28,7 +29,7 @@ function ReadingSources({ reading, pdf, audiobook }) {
 				{pdf ? (
 					<div className={`${sourcesCss.pdf}`}>
 						<p className={`${sourcesCss.pdfLabel}`}>PDF</p>
-						<Link to={pdf.path} className={`${sourcesCss.pdfLink}`}>
+						<Link to={"pdf"} className={`${sourcesCss.pdfLink}`}>
 							<img
 								src={reading.coverImage}
 								className={`${sourcesCss.img}`}

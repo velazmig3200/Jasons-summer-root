@@ -9,15 +9,16 @@ function ScheduleItem2({ item }) {
 		if (!item.reading) return;
 		if (e.title.toLowerCase() == item.reading.toLowerCase()) return e;
 	});
+	const path = currentReading && filterPath(currentReading.title);
 
 	return (
 		<p>
 			<b>{item.title ? `${item.title}:` : null} </b>
 			{currentReading ? (
-				<Link style={{ textDecoration: "none" }}>
+				<Link to={path} style={{ textDecoration: "none" }}>
 					{currentReading.title}{" "}
 					<span style={{ color: "white" }}>
-						by {currentReading.author}. {currentReading.note}
+						by {currentReading.author}. {currentReading.assignment}
 					</span>
 				</Link>
 			) : null}

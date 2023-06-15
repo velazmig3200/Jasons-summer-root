@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import dropdownCss from "./dropdown.module.css";
+import filterPath from "../filterPath";
 
 function Dropdown({ links, dropdownState }) {
 	function getLinks() {
@@ -8,7 +9,7 @@ function Dropdown({ links, dropdownState }) {
 
 		for (let i in links) {
 			result.push(
-				<Link to={links[i].path} key={i}>
+				<Link to={filterPath(links[i].title)} key={i}>
 					{links[i].title}
 				</Link>
 			);
