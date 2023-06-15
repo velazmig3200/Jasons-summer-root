@@ -7,15 +7,17 @@ import Header from "./Header/Header";
 import appCss from "./App.module.css";
 import readings from "./readings";
 import SummerImg1 from "./Summer-img-1.jpg";
+import filterPath from "./filterPath";
 
 function App() {
 	function buildRoute() {
 		let result = [];
 		for (let i in readings) {
+			let path = filterPath(readings[i].title);
 			result.push(
 				<Route
 					key={result.length}
-					path={readings[i].path}
+					path={path}
 					element={
 						<ReadingSources
 							reading={readings[i]}
