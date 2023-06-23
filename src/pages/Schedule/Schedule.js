@@ -9,7 +9,9 @@ function Schedule() {
 		for (let i in scheduleData) {
 			result.push(
 				<section key={i} className={`${scheduleCss.section}`}>
-					<h2>{scheduleData[i].topic}</h2>
+					<h2 style={{ fontSize: "1rem" }}>
+						{scheduleData[i].topic}
+					</h2>
 					{scheduleItems(scheduleData[i].items)}
 				</section>
 			);

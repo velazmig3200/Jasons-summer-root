@@ -17,12 +17,14 @@ function ScheduleItem2({ item }) {
 			{currentReading ? (
 				<Link to={path} style={{ textDecoration: "none" }}>
 					<span style={{ textDecoration: "underline" }}>
-						{currentReading.title}{" "}
-					</span>
+						{currentReading.title}
+					</span>{" "}
 					<span style={{ color: "white" }}>
 						by {currentReading.author}. {currentReading.assignment}
 					</span>
 				</Link>
+			) : item.reading ? (
+				<span>{item.reading}..?</span>
 			) : null}
 		</p>
 	);

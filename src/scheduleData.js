@@ -22,7 +22,7 @@ const schedule = [
 		items: [
 			{ title: "Week 9", reading: "ideology, generics, common ground" },
 			{ title: "Week 10", reading: "why it's okay to eat meat" },
-            {title: "Last Meeting", reading: ""}
+			{ title: "Last Meeting", reading: "" }
 		]
 	},
 	{ topic: "", items: [{}] }

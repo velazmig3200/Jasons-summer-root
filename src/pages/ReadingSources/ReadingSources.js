@@ -22,6 +22,8 @@ function ReadingSources({ reading, pdf, audiobook }) {
 				)}
 			</p>
 			<br />
+			<p>{reading.assignment}</p>
+			<br />
 			<br />
 
 			<div className={`${sourcesCss.container}`}>
