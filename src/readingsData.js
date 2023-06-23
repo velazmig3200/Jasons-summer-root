@@ -13,6 +13,11 @@ const readings = [
 		audiobook: {
 			link: "https://youtu.be/xBt3kkjD978",
 			src: "https://www.youtube-nocookie.com/embed/xBt3kkjD978"
+		},
+		excerpt: {
+			coverImage: "",
+			link: "https://pubs.shure.com/guide/SM58/en-US.pdf",
+			alt: "excerpt pdf"
 		}
 	},
 	{

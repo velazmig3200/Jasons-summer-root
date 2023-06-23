@@ -4,8 +4,9 @@ const schedule = [
 		items: [
 			{ title: "Week 1", reading: "Discourse on colonialism" },
 			{ title: "Week 2", reading: "Black Skin, White Masks" },
-			{ title: "Week 3", reading: "orientalism" },
-			{ title: "Week 4", reading: "pedagogy of the oppressed" }
+			{ title: "Week 3", reading: "Wretched of the Earth" },
+			{ title: "Week 4", reading: "orientalism" }
+			// { title: "Week 4", reading: "pedagogy of the oppressed" }
 		]
 	},
 	{

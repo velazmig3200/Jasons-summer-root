@@ -18,13 +18,7 @@ function App() {
 				<Route
 					key={result.length}
 					path={path}
-					element={
-						<ReadingSources
-							reading={readingsData[i]}
-							pdf={readingsData[i].pdf}
-							audiobook={readingsData[i].audiobook}
-						/>
-					}
+					element={<ReadingSources reading={readingsData[i]} />}
 				/>
 			);
 
@@ -38,6 +32,24 @@ function App() {
 							<PdfPage
 								pdfLink={readingsData[i].pdf.link}
 								altText={readingsData[i].pdf.alt}
+							/>
+						}
+					/>
+				);
+			}
+
+			if (readingsData[i].excerpt) {
+				const excerptPath = `${filterPath(
+					readingsData[i].title
+				)}/excerpt`;
+				result.push(
+					<Route
+						key={"e" + result.length}
+						path={excerptPath}
+						element={
+							<PdfPage
+								pdfLink={readingsData[i].excerpt.link}
+								altText={readingsData[i].excerpt.alt}
 							/>
 						}
 					/>

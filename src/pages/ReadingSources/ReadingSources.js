@@ -3,20 +3,20 @@ import sourcesCss from "./sources.module.css";
 import ExternalLinkIcon from "../../ExternalLinkIcon";
 import { Link } from "react-router-dom";
 
-function ReadingSources({ reading, pdf, audiobook }) {
+function ReadingSources({ reading }) {
 	return (
 		<main>
 			<h1>{reading.title}</h1>
 			<p>
 				by {reading.author}{" "}
-				{pdf && (
-					<a target="_blank" href={pdf.link}>
+				{reading.pdf && (
+					<a target="_blank" href={reading.pdf.link}>
 						External PDF <ExternalLinkIcon />
 					</a>
 				)}
 				{" | "}
-				{audiobook && (
-					<a target="_blank" href={audiobook.link}>
+				{reading.audiobook && (
+					<a target="_blank" href={reading.audiobook.link}>
 						Youtube Link <ExternalLinkIcon />
 					</a>
 				)}
@@ -27,7 +27,7 @@ function ReadingSources({ reading, pdf, audiobook }) {
 			<br />
 
 			<div className={`${sourcesCss.container}`}>
-				{pdf ? (
+				{reading.pdf ? (
 					<div className={`${sourcesCss.pdf}`}>
 						<p className={`${sourcesCss.pdfLabel}`}>PDF</p>
 						<Link to={"pdf"} className={`${sourcesCss.pdfLink}`}>
@@ -39,10 +39,24 @@ function ReadingSources({ reading, pdf, audiobook }) {
 					</div>
 				) : null}
 
-				{audiobook ? (
+				{reading.excerpt ? (
+					<div className={`${sourcesCss.pdf}`}>
+						<p className={`${sourcesCss.pdfLabel}`}>PDF</p>
+						<Link
+							to={"excerpt"}
+							className={`${sourcesCss.pdfLink}`}>
+							<img
+								src={reading.excerpt.coverImage}
+								className={`${sourcesCss.img}`}
+							/>
+						</Link>
+					</div>
+				) : null}
+
+				{reading.audiobook ? (
 					<iframe
 						className={`${sourcesCss.iframe}`}
-						src={audiobook.src}
+						src={reading.audiobook.src}
 						title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowFullScreen></iframe>

@@ -11,6 +11,7 @@
 	--color2: hsl(262, 100%, 72%);
 	--color3: hsla(262, 71%, 18%, 0.9);
 	--black: black;
+	--gray: #888;
 	--white: white;
 	--bg-color: var(--black);
 

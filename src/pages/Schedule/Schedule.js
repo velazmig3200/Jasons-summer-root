@@ -29,7 +29,7 @@ function Schedule() {
 	return (
 		<>
 			<h1>Schedule</h1>
-			<p>First Meeting May 21</p>
+			<p>First Meeting: Sunday, May 21 2023</p>
 			{sections()}
 		</>
 	);
