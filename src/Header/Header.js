@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import headerCss from "./header.module.css";
-import readings from "../readings";
+import readingsData from "../readingsData";
 
 function Header() {
 	const currentPage = useLocation().pathname;
@@ -57,7 +57,7 @@ function Header() {
 				</button>
 			</div>
 
-			<Dropdown links={readings} dropdownState={dropdownState} />
+			<Dropdown links={readingsData} dropdownState={dropdownState} />
 		</nav>
 	);
 }

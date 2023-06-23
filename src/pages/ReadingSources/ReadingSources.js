@@ -2,7 +2,6 @@ import React from "react";
 import sourcesCss from "./sources.module.css";
 import ExternalLinkIcon from "../../ExternalLinkIcon";
 import { Link } from "react-router-dom";
-import filterPath from "../../filterPath";
 
 function ReadingSources({ reading, pdf, audiobook }) {
 	return (

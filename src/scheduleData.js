@@ -1,25 +1,31 @@
 const schedule = [
 	{
-		reading: "Discourse on Colonialism",
-		"reading assignment":
-			"Book pages 31-78, ignore the intro and the interview at the end.",
-		topic: "Post Colonialism"
+		topic: "Post Colonialism",
+		items: [
+			{ title: "Week 1", reading: "Discourse on colonialism" },
+			{ title: "Week 2", reading: "Black Skin, White Masks" },
+			{ title: "Week 3", reading: "orientalism" },
+			{ title: "Week 4", reading: "pedagogy of the oppressed" }
+		]
 	},
 	{
-		reading: "Black Skin, White Masks",
-		"reading assignment": "Book pages not pdf Pages 9-40. (Intro & Ch.1)",
-		topic: "Post Colonialism"
+		topic: "Miscellaneous",
+		items: [
+			{ title: "Week 5", reading: "Queer" },
+			{ title: "Week 6", reading: "the metamorphosis" },
+			{ title: "Week 7", reading: "the myth of sisyphus" },
+			{ title: "Week 8", reading: "seize the time" }
+		]
 	},
 	{
-		reading: "Orientalism",
-		"reading assignment": "Book pages 1-28. (Intro & Ch.1)",
-		topic: "Post Colonialism"
+		topic: "",
+		items: [
+			{ title: "Week 9", reading: "ideology, generics, common ground" },
+			{ title: "Week 10", reading: "why it's okay to eat meat" },
+            {title: "Last Meeting", reading: ""}
+		]
 	},
-	{
-		reading: "Pedagogy of the Oppressed",
-		"reading assignment": "Book pages 43-86. (Ch.1 & Ch.2)",
-		topic: "Post Colonialism"
-	}
+	{ topic: "", items: [{}] }
 ];
 
 export default schedule;

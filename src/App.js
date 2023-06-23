@@ -1,43 +1,43 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ReadingSources from "./pages/ReadingSources/ReadingSources";
 import PdfPage from "./pages/PdfPage/PdfPage";
 import Header from "./Header/Header";
 import appCss from "./App.module.css";
-import readings from "./readings";
+import readingsData from "./readingsData";
 import SummerImg1 from "./Summer-img-1.jpg";
 import filterPath from "./filterPath";
 
 function App() {
 	function buildRoute() {
 		let result = [];
-		for (let i in readings) {
-			let path = filterPath(readings[i].title);
+		for (let i in readingsData) {
+			let path = filterPath(readingsData[i].title);
 			result.push(
 				<Route
 					key={result.length}
 					path={path}
 					element={
 						<ReadingSources
-							reading={readings[i]}
-							pdf={readings[i].pdf}
-							audiobook={readings[i].audiobook}
+							reading={readingsData[i]}
+							pdf={readingsData[i].pdf}
+							audiobook={readingsData[i].audiobook}
 						/>
 					}
 				/>
 			);
 
-			if (readings[i].pdf) {
-				const pdfPath = `${filterPath(readings[i].title)}/pdf`;
+			if (readingsData[i].pdf) {
+				const pdfPath = `${filterPath(readingsData[i].title)}/pdf`;
 				result.push(
 					<Route
 						key={result.length}
 						path={pdfPath}
 						element={
 							<PdfPage
-								pdfLink={readings[i].pdf.link}
-								altText={readings[i].pdf.alt}
+								pdfLink={readingsData[i].pdf.link}
+								altText={readingsData[i].pdf.alt}
 							/>
 						}
 					/>
