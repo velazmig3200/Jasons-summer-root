@@ -4,22 +4,26 @@ import ExternalLinkIcon from "../../ExternalLinkIcon";
 import { Link } from "react-router-dom";
 
 function ReadingSources({ reading }) {
+	function externalLink(name, item) {
+		if (!item) return null;
+		return (
+			<>
+				{" | "}
+				<a target="_blank" href={item.link}>
+					{name} <ExternalLinkIcon />
+				</a>
+			</>
+		);
+	}
+
 	return (
 		<main>
 			<h1>{reading.title}</h1>
 			<p>
-				by {reading.author}{" "}
-				{reading.pdf && (
-					<a target="_blank" href={reading.pdf.link}>
-						External PDF <ExternalLinkIcon />
-					</a>
-				)}
-				{" | "}
-				{reading.audiobook && (
-					<a target="_blank" href={reading.audiobook.link}>
-						Youtube Link <ExternalLinkIcon />
-					</a>
-				)}
+				by {reading.author}
+				{externalLink("External PDF", reading.pdf)}
+				{externalLink("Youtube Link", reading.audiobook)}
+				{externalLink("Excerpt", reading.excerpt)}
 			</p>
 			<br />
 			<p>{reading.assignment}</p>
